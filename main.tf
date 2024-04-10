@@ -18,12 +18,12 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
-provider "aws" {
-  region                   = "us-east-1"
-  shared_credentials_files = ["~/.aws/credentials"]
-  profile                  = "vscode"
-}
+# Configure the AWS Provider. This gets commented out when Jenkins is involved.
+# provider "aws" {
+#   region                   = "us-east-1"
+#   shared_credentials_files = ["~/.aws/credentials"]
+#   profile                  = "vscode"
+# }
 
 # Here we are calling the "vpc" module that was defined in the modules/vpc folder. Now that we've built the VPC 
 # in a sub folder and defined it as a module, we can reuse it in other procjects and change the vars.
