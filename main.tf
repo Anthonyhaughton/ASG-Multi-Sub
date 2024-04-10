@@ -8,6 +8,16 @@ terraform {
   }
 }
 
+# Create remote backend for state to be stored on a bucket in s3
+# You can run "terraform init -migrate-state" to change state from local to s3. Or just a "terraform init" will work.
+terraform {
+  backend "s3" {
+    bucket = "multisub-tfstate"
+    key = "multisub-state"
+    region = "us-east-1"
+  }
+}
+
 # Configure the AWS Provider
 provider "aws" {
   region                   = "us-east-1"
