@@ -1,7 +1,7 @@
 # Create key pair for EC2. In VSCode terminal; I ran "ssh-keygen.exe -t ed25519" 
 resource "aws_key_pair" "terra_auth" {
   key_name   = "terra_key"
-  public_key = file("~/.ssh/terra_key.pub") # I used the file func so that I can just point to the key rather than copy and paste the whole ed string
+  public_key = file("~/.ssh/jenkins_key.pub") # I used the file func so that I can just point to the key rather than copy and paste the whole ed string
 }
 
 # Create Launch Template for ASG
