@@ -1,62 +1,17 @@
-# Anthony's GitHub Portfolio
+# Revamping Project 1
 
-Welcome to my GitHub repository! This repository contains a collection of my work-related and personal projects, covering a range of languages and technologies.
+## Trying to rebuild Project 1 but better..
 
-## Project Overview
 
-This repository serves as a showcase for various projects, including Python scripts, Bash utilities, and Infrastructure as Code using Terraform.
+In project 1 I succesfully built a highly availble architecture from Terraform but 
+the build was sloppy and my main.tf file was very long so it's hard to see what is actually 
+happening. 
 
-## Directory Structure
+In Project 1.5 I will attempt to learn more about terraform best practices and file structure in an attempt to clean up my code by breaking down the main file into sections like networking, compute, etc. 
 
-- **IaC/**
-    - **Ansible/**
-      - Ansible is considered another IaC tool, but I see it more as something you should
-  use when the infrastructure has already been build. I really like it as a way to harden
-  machines. When I first started messing around in the cloud, Ansible was the first tool
-  I used to try and provision resources. Here you can find how to provision standard 
-  images and more complex images.
-    - **Jenkins/**
-      - Just needed a place to store the default jenkins file.
-      I've been using Jenkins along with Terraform to get an understanding of CI/CD.
-    - **CloudFormation/**
-      - CF is AWS's IaC tool, but I've been more focused on TF.
-      I plan to get more of an understanding of it in the future but trying to learn both
-      at the same time would be too much.
-    - **Terraform/**
-      - Terraform has been super fun to learn. It's cool to see infrastructure being built
-        from a few lines of code. I really think having a solid understanding of some kind 
-        of IaC tool goes a long way in the cloud. Here you can find some IaC projects I've
-        been working. Most of them have their own readme's. Others are in separate repos,
-        I did this so I can make CI/CD projects with Jenkins.
-- **My Projects/**
-  - Here is where you can find random projects I'm working on that aren't related
-    to the majority of this repo. 
-- **Python/**
-  - This is where all my Python scripts and projects are. Most of the files are
-    either for Harvard's 'CS50' class or the '100 Days of Code' class. those are the two
-    primary resources I used to get a basic understanding of Python's syntax and
-    structure.
-- **Work Notes/**
-  - Trying to get better at putting more info/problems/fixes in this folder as they
-    come up. 
-- **Work Projects/**
-  - These are some scripts I've used for automating some tasks at work as well as
-    trying new things.
+I'll try to use modules to clean up the code and make it more modular.
 
-## Language and Technologies
-  
-  - Python
-  - Bash
-  - HTML/CSS
-  - Ansible/YAML
-  - Terraform/HCL
-  - Jenkins/Groovy
+I will also try to better use varibles with default values and the .tfvars file so that I can plug in the 
+values in one location and be able to hand off this stack to a developer to build the arch he needs.
 
-## Installation
-
-If you'd like to try any of these projects/scripts, make sure to install the necessary dependencies.
-
-## Documentation
-
-For detailed documentation on each project, refer to the respective project directories. (Although most don't have
-any info) I'm trying to get better.
+12/29/23: I was able to fix a issue I was having with deploying this build but I was able to reuse a block in my lamp proj and fix it!! More deets in modules/vpc/outputs.tf
